@@ -5,7 +5,7 @@
     var MainController = function ($scope) {
 
         var base_sso_url = "https://login.eveonline.com/oauth/authorize/?";
-        var response_type = "token";
+        var response_type = "code";
         var redirect_uri = "http://localhost/angular/#/"
         var client_id = "3977760521344586a88dd8268fe0548d"
         var scope = "publicData"

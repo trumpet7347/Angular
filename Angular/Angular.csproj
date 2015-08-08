@@ -58,11 +58,12 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="scripts\controllers\MarketController.js" />
     <Content Include="scripts\vender\angular-route.js" />
     <Content Include="scripts\vender\angular-route.min.js" />
     <Content Include="scripts\app.js" />
     <Content Include="scripts\controllers\MainController.js" />
-    <Content Include="style\start-template.css" />
+    <Content Include="style\app.css" />
     <Content Include="style\vender\bootstrap-theme.css" />
     <Content Include="style\vender\bootstrap-theme.min.css" />
     <Content Include="style\vender\bootstrap.css" />
@@ -96,6 +97,7 @@
     <Content Include="scripts\vender\angular.js" />
     <Content Include="scripts\vender\angular.min.js" />
     <Content Include="views\main.html" />
+    <Content Include="views\market.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
