@@ -4,7 +4,7 @@
 
     var EveCrest = function ($http) {
 
-        var getItemTypeIds = function(){
+        var getItemTypeIds = function(authToken){
 
             return "This is from the EveCrest Service"
         };

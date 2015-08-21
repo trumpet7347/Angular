@@ -1,4 +1,4 @@
-﻿angular.module("app").controller("MainController", function () {
+﻿angular.module("app").controller("MainController", function ($scope) {
 
     var base_sso_url = "https://login.eveonline.com/oauth/authorize/?";
     var response_type = "code";
