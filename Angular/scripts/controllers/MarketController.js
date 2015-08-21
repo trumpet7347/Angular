@@ -1,11 +1,8 @@
-﻿(function () {
+﻿angular.module("app").controller("MarketController", function ($scope, EveCrest) {
 
-    var app = angular.module("app");
-
-    var MarketController = function ($scope) {
-
-        $scope.message = "this is a test"
+    $scope.search = function () {
+        $scope.crestToken = EveCrest.getItemTypeIds();
+        console.log("test")
     }
 
-    app.controller("MarketController", MarketController);
-}());
+})
