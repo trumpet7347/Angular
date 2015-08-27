@@ -4,9 +4,8 @@
 
     var EveCrest = function ($http) {
 
-        var getItemTypeIds = function(authToken){
-
-            return "This is from the EveCrest Service"
+        var getItemTypeIds = function(){
+            return $http.get('https://public-crest.eveonline.com/market/types/');
         };
 
 
