@@ -1,12 +1,24 @@
 ﻿angular.module("app").service("EveCrest", function ($http) {
 
+    var marketItems = [];
+
     var returnResponseData = function (response) {
-        return response.data;
+        marketItems.push.apply(response.data.items);
+        if (response.data.next) {
+            getMarketItemTypeIds(response.data.next);
+        }
     };
 
-    var getMarketItemTypeIds = function () {
-        return $http.get('https://public-crest.eveonline.com/market/types/')
-                    .then(returnResponseData(response));
+    var getMarketItemTypeIds = function (next) {
+
+        if (next) {
+            $http.get(next).then(returnResponseData);
+        }
+        else {
+            $http.get('https://public-crest.eveonline.com/market/types/')
+                 .then(returnResponseData);
+        }
+
     };
 
     return {
